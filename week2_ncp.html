@@ -1,0 +1,302 @@
+<html>
+<head>
+<style>
+	.table2{
+		 border-collapse: collapse;
+	}
+	.table1 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+.logoimg{
+   width: 50%;
+}
+
+.td, .th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.tr:nth-child(even) {
+  background-color: #dddddd;
+}
+    body {
+        background-image: url("bgimg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   .sign {
+        padding-top: 10px;
+        color: #8C55AA;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+    
+    .un,.pass {
+    width: 76%;
+    color: rgb(38, 50, 56);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background: rgba(136, 126, 126, 0.04);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.02);
+    margin-bottom: 50px;
+    margin-left: 46px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+    
+    .submit {
+        cursor: pointer;
+        border-radius: 5em;
+        color: #fff;
+        background: linear-gradient(to right, #9C27B0, #E040FB);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left: 35%;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+	}
+    
+    .forgot {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #E1BEE7;
+        padding-top: 15px;
+	}
+    .main {
+        background-color: #FFFFFF;
+        width: 350px;
+        height: 350px;
+        margin: 4em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 5px 2px rgba(0, 0, 0, 0.14);
+        padding-bottom: 2px;
+    }
+.topnav {
+  overflow: hidden;
+  background-color: #F2ACEB;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color:#86397F;
+  color: white;
+}
+
+.container{
+  padding: 1rem;
+  margin: 1rem;
+  width: 50%;
+}
+.table-scroll{
+  display: block;
+  empty-cells: show;
+  border-spacing: 0;
+  border: 1px solid;
+}
+
+.table-scroll thead{
+  background-color:#e4f0f5 ;  
+  position:relative;
+  display: block;
+  width:100%;
+}
+.table-scroll tfoot{
+  background-color:#e4f0f5 ;  
+  position:relative;
+  display: block;
+  width:100%;
+}
+
+.table-scroll tbody{
+  display: block; position:relative;
+  width:100%; overflow-y:scroll;
+  border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.table-scroll tr{
+  width: 100%;
+  display:flex;
+}
+
+.table-scroll td,.table-scroll th{
+  flex-basis:100%;
+  flex-grow:2;
+  display: block;
+  padding: 1rem;
+  text-align:left;
+}
+
+
+.table-scroll.small-first-col td:first-child,
+.table-scroll.small-first-col th:first-child{
+  flex-basis:20%;
+  flex-grow:1;
+}
+
+.table-scroll tbody tr:nth-child(2n){
+  background-color: rgba(130,130,170,0.1);
+}
+
+.body-half-screen{
+  max-height: 50vh;
+}
+
+.small-col{flex-basis:10%;}
+</style>
+</head>
+<body>
+
+<table style="float: right;" class="table2"> 
+	<tr>
+		<td>
+			<div class="topnav" style="float: right;">
+  <a class="active" href="#home" data-toggle="tab">Home</a>
+  <a href="#news" data-toggle="tab">News</a>
+  <a href="#contact" data-toggle="tab">Contact</a>
+  <a href="#about" data-toggle="tab">About</a>
+</div>
+		</td>
+	</tr>
+<tr> 
+<td><div class="main" style="float: right;">
+        <p class="sign" align="center">Sign in</p>
+        <form class="form1">
+        <input class="un " type="text" align="center" placeholder="Username">
+        <input class="pass" type="password" align="center" placeholder="Password">
+        <a class="submit" align="center">Sign in</a>
+        <p class="forgot" align="center"><a href="#">Forgot Password?</a></p>
+        </form> 
+    </div>
+</td> 
+</tr> 
+<tr>
+	<td>
+		<div class="main" style="float: right; overflow-y: scroll;">
+        <p class="sign" align="center">Sign up</p>
+        <form class="form1">
+        <div >
+        <input class="un " type="text" align="center" placeholder="First name">
+        <input class="un " type="text" align="center" placeholder="Last name">
+        <input class="un " type="text" align="center" placeholder="Username">
+        <input class="pass" type="password" align="center" placeholder="Password">
+        <input class="un" type="text" align="center" placeholder="confirm Pasword">
+        <input class="un" type="email" align="center" placeholder="email">
+        <input class="un" type="text" align="center" placeholder="Phone number">
+        <input class="un" type="text" align="center" placeholder="Address">
+        <input class="un " type="text" align="center" placeholder="City">
+        <input class="un" type="text" align="center" placeholder="Nationality">
+        <input class="submit" type="checkbox" align="center"> <label for="vehicle1"> Agree to terms and conditions</label>
+        <input class="submit" type="submit" value="Submit" align="center">
+        <p class="forgot " align="center"><a href="#">Reset</a></p>
+        </div>
+        </form> 
+        </div>
+	</td>
+</tr>
+</table>
+<div><table><tr>
+	<td><img class="logoimg" src="logo.png"></td>
+<td><h1 style="font-size: 50px; align-items: center; color: #A40931">About Pepsi</h1></td></tr>
+</table>
+<p>Pepsi was first introduced as "Brad's Drink" in New Bern, North Carolina, United States, in 1893 by Caleb Bradham, who made it at his drugstore where the drink was sold. It was renamed Pepsi-Cola in 1898 after the Greek word for "digestion" (πέψις, pronounced Pepsis), which the drink was purported to aid, and "cola" after the kola nut. The original recipe also included sugar and vanilla. Bradham sought to create a fountain drink that was appealing and would aid in digestion and boost energy</p>
+<p>Pepsiman is an official Pepsi mascot from Pepsi's Japanese corporate branch, created sometime around the mid-1990s. Pepsiman took on three different outfits, each one representing the current style of the Pepsi can in distribution. Twelve commercials were created featuring the character. His role in the advertisements is to appear with Pepsi to thirsty people or people craving soda. Pepsiman happens to appear at just the right time with the product. After delivering the beverage, sometimes Pepsiman would encounter a difficult and action-oriented situation which would result in injury. Another more minor mascot, Pepsiwoman, also featured in a few of her own commercials for Pepsi Twist; her appearance is basically a female Pepsiman wearing a lemon-shaped balaclava</p>
+<br>
+<br>
+<p style="color: #760BEF;">We care for you Stay safe at home. Did you know?</p>
+</div>
+<div class="container">
+<table class="table-scroll small-first-col">
+  <thead>
+    <tr>
+    <th>Name of the country</th>
+    <th>latest count on corona</th>
+    <th>No of daeth</th>
+    </tr>
+  </thead>
+  <tbody class="body-half-screen">
+	<tr>
+		<td>United States</td>
+		<td>	5,095,748</td>
+		<td>164,104</td>
+	</tr>
+	<tr>
+		<td>Brazil</td>
+		<td>2,967,064</td>
+		<td>99,702</td>
+	</tr>
+	<tr>
+		<td>India</td>
+		<td>2,091,416</td>
+		<td>42,617</td>
+	</tr>
+	<tr>
+		<td>Russia</td>
+		<td>882,347</td>
+		<td>14,854</td>
+	</tr>
+	<tr>
+		<td>South Africa</td>
+		<td>545,476</td>
+		<td>9,909</td>
+	</tr>
+	<tr>
+		<td>Mexico</td>
+		<td>469,407</td>
+		<td>51,311</td>
+	</tr>
+	<tr>
+		<td>Peru</td>
+		<td>463,875</td>
+		<td>20,649</td>
+	</tr>
+	<tr>
+		<td>Chile</td>
+		<td>368,825</td>
+		<td>9,958</td>
+	</tr>
+	<tfoot>
+    <tr>
+    <th>Total number of countries</th>
+    <th>total recent cases</th>
+    <th>total no of death</th>
+    </tr>
+     <tr>
+    <th>  213</th>
+    <th>    19,557,170</th>
+    <th>   724,340</th>
+    </tr>
+  </tfoot>
+</tbody>
+</table>
+</div>
+</body>
+</html>
