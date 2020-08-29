@@ -163,8 +163,7 @@ function validate() {
     document.myForm.age.focus() ;
     return false;
   }
-  else if( document.myForm.phnum.value == "" ||
-    document.myForm.phnum.value.length != 10 || document.myForm.phnum.value.match(numbers) ) {
+  else if( document.myForm.phnum.value == "" || document.myForm.phnum.value.match(numbers) ) {
             
       alert( "Please provide valid phone number;" );
         document.myForm.phnum.focus() ;
