@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+<style type="text/css">
+  .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.cutrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+.cutcontainer {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.center{
+    float:center;
+    text-align: center;
+    }
+
+.regbtn {
+  background-color: #74A4E1;
+  color: white;
+  padding: 16px 20px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+input[type=number]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+input[type=text], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=password], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=Phone], select, textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+input:invalid{
+  border-color: #900;
+  background-color: #FDD;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+</style>
+<body>
+<script type="text/javascript">
+function validate() {
+  var name=document.myForm.name.value;  
+  var password=document.myForm.password.value;
+  var password2=document.myForm.password2.value;
+  var email=document.myForm.email.value;
+  var age=document.myForm.age.value;
+  var numbers = /^[0-9]{5}-[0-9]{5}$/;
+  var paswd=  /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+  var dateformat = /^"[0-9]{2}-[0-9]{2}-[0-1]{4}"$/;
+
+  if (name==null || name==""){  
+    alert("Name can't be blank"); 
+    document.myForm.name.focus() ; 
+    return false;  
+  }
+  else if(paswd.test(password)==false){
+  alert("Password must be at least 8 characters long.");  
+  return false;  
+  }
+  else if(password2!=password){
+    alert("passowrd doesn't match");
+    return false;
+  }
+
+  else if( email == "" || email==null) {
+    alert( "Please provide your Email!" );
+    document.myForm.email.focus() ;
+    return false;
+    }
+    else if((/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))==false){
+      alert( "Please provide valid Email Id" );
+    document.myForm.email.focus() ;
+    return false;
+    }
+
+  else if(document.myForm.date.value==""){
+    alert( "Please provide your date of birth!" );
+    document.myForm.age.focus() ;
+    return false;
+  }
+
+ else if(dateformat.test(document.myForm.date.value)){
+    alert( "please provide correct date format!" );
+    document.myForm.age.focus() ;
+    return false;
+ }
+
+  else if(age==""){
+    alert( "Please provide your age!" );
+    document.myForm.age.focus() ;
+    return false;
+  }
+  else if( document.myForm.phnum.value == "" ||
+    document.myForm.phnum.value.length != 10 || document.myForm.phnum.value.match(numbers) ) {
+            
+      alert( "Please provide valid phone number;" );
+        document.myForm.phnum.focus() ;
+        return false;
+        }
+  else if( document.myForm.state.value == "--Choose state from below--" ) {
+    alert( "Please provide your state!" );
+      return false;
+    }
+  else{
+  return( true );}
+
+  }   
+</script>
+<h2 align="center">Registration form</h2>
+<form name = "myForm" onsubmit = "return validate()">
+  <div class="new center">
+    <div class="cutcontainer">
+      <div class="cutrow">
+      <div class="col-25">
+        <label for="name">Name</label>
+      </div>
+      <div class="col-75">
+        <input name="name" placeholder="Name" type="text" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="password">Password</label>
+      </div>
+      <div class="col-75">
+        <input name="password" placeholder="Enter your password" type="password" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="password2"> Retype Password</label>
+      </div>
+      <div class="col-75">
+        <input name="password2" placeholder="Retype your password" type="password" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="email">eamil Id</label>
+      </div>
+      <div class="col-75">
+        <input name="email" placeholder="xxx@gmail.com" type="text" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="Gender">Gender</label>
+      </div>
+      <div class="col-75">
+        <input name="Gender" required type="radio"><label for="male" style="padding-right: 50px;">Male</label>
+        <input name="Gender" required type="radio"><label for="female" style="padding-right: 50px;">Female</label>
+        <input name="Gender" required type="radio"><label for="other" style="padding-right: 50px;">Other</label>
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="date">Date of birth</label>
+      </div>
+      <div class="col-75">
+        <input name="date" placeholder="Enter your date of birth(dd-mm-yyyy)" type="text" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="age">Age</label>
+      </div>
+      <div class="col-75">
+        <input name="age" placeholder="Enter your age(12-100)" type="number" max="100" min="12" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="SelecCourse">State</label>
+      </div>
+      <div class="col-75">
+        <select id="state" name="state" required>
+          <option Andrapradhesh>--Choose state from below--</option>
+          <option value="Tamil Nadu">Tamil Nadu</option>
+          <option value="Kerala">Kerala</option>
+          <option value="Karnataka">Karnataka</option>
+          <option value="Andrapradhesh">Andrapradhesh</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <div class="col-25">
+        <label for="phnum">Phone Number</label>
+      </div>
+      <div class="col-75">
+        <input name="phnum" placeholder="Enter your phone Number (Eg: 90039-67541)" type="Phone" style="text-align: center;">
+      </div>
+    </div>
+
+    <div class="cutrow">
+      <input type="checkbox" name="agree" required value="">
+      <label for="agree"> Agree to the terms and condtion</label><br>
+    </div>
+
+    <div class="cutrow">
+     <button class="regbtn" type="submit" value="submit">Register</button>
+    </div>
+  </div>
+</div>
+</form>
+</html>
